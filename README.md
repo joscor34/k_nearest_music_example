@@ -3,13 +3,13 @@
 ![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)
 ![Dash](https://img.shields.io/badge/Dash-2.0+-green.svg)
 ![Plotly](https://img.shields.io/badge/Plotly-5.0+-red.svg)
-![License](https://img.shields.io/badge/License-MIT-yellow.svg)
 
 Una aplicación web interactiva en 3D que visualiza el algoritmo **K-Nearest Neighbors (KNN)** aplicado a un sistema de recomendación musical.
 
 ## ✨ Características
 
 ### 🎨 Interfaz Premium
+
 - **Diseño moderno** inspirado en Spotify con tema oscuro
 - **Visualización 3D interactiva** con Plotly
 - **Panel de control completo** con sliders y controles en tiempo real
@@ -18,6 +18,7 @@ Una aplicación web interactiva en 3D que visualiza el algoritmo **K-Nearest Nei
 - **Responsive design** que se adapta a cualquier pantalla
 
 ### 🎯 Funcionalidades KNN
+
 - **Ajuste dinámico de K** (1-30 vecinos)
 - **Control de características musicales**:
   - ⚡ Energía (0-100)
@@ -29,6 +30,7 @@ Una aplicación web interactiva en 3D que visualiza el algoritmo **K-Nearest Nei
 - **Recomendación automática** basada en géneros
 
 ### 📊 Visualización Educativa
+
 - **100 canciones** distribuidas en 8 géneros musicales
 - **Códigos de color** por género
 - **Líneas de conexión** entre punto de consulta y vecinos
@@ -39,19 +41,23 @@ Una aplicación web interactiva en 3D que visualiza el algoritmo **K-Nearest Nei
 ## 🎬 Demo Visual
 
 ### Panel Principal
+
 La aplicación muestra:
+
 - **Gráfico 3D rotable** con todas las canciones coloreadas por género
 - **Punto de consulta** (estrella amarilla) representando tus gustos
 - **K vecinos cercanos** resaltados con bordes amarillos
 - **Esfera semitransparente** mostrando el radio de búsqueda
 
 ### Panel de Control
+
 - Slider para ajustar K con display LED
 - Sliders para cada característica musical con badges de valor
 - Botón para generar consultas aleatorias
 - Botón de reinicio
 
 ### Panel de Información
+
 - Card destacado con el género recomendado
 - Gráfico de distribución de géneros entre vecinos
 - Lista de top 5 vecinos más cercanos
@@ -60,18 +66,21 @@ La aplicación muestra:
 ## 🚀 Instalación
 
 ### Prerrequisitos
+
 - Python 3.8 o superior
 - pip (gestor de paquetes de Python)
 
 ### Pasos de Instalación
 
 1. **Clonar o descargar el repositorio**
+
 ```bash
 git clone <tu-repositorio>
 cd k_nearest
 ```
 
 2. **Crear un entorno virtual** (recomendado)
+
 ```bash
 python -m venv .venv
 source .venv/bin/activate  # En macOS/Linux
@@ -80,11 +89,13 @@ source .venv/bin/activate  # En macOS/Linux
 ```
 
 3. **Instalar dependencias**
+
 ```bash
 pip install numpy plotly dash dash-bootstrap-components dash-daq
 ```
 
 ### Instalación Rápida
+
 ```bash
 # Todo en un comando
 python -m venv .venv && source .venv/bin/activate && pip install numpy plotly dash dash-bootstrap-components dash-daq
@@ -103,21 +114,25 @@ La aplicación se iniciará en `http://localhost:8050`
 ### Controles Interactivos
 
 #### 🎚️ Slider de K
+
 - Ajusta el número de vecinos cercanos (1-30)
 - Observa cómo cambia la recomendación en tiempo real
 - El display LED muestra el valor actual
 
 #### 🎸 Características Musicales
+
 - **Energía**: Nivel de intensidad y actividad
 - **Bailabilidad**: Qué tan apto es para bailar
 - **Valencia**: Positividad musical (feliz vs triste)
 - Cada slider muestra el valor actual en un badge
 
 #### 🎲 Botones de Acción
+
 - **Generar Aleatorio**: Crea un nuevo punto de consulta aleatorio
 - **Reiniciar**: Vuelve a valores por defecto (50, 50, 50, K=5)
 
 #### 🖱️ Interacción con el Gráfico 3D
+
 - **Arrastrar**: Rotar la visualización
 - **Scroll**: Hacer zoom in/out
 - **Hover**: Ver detalles de cada canción
@@ -133,11 +148,12 @@ La aplicación se iniciará en `http://localhost:8050`
    - Eje Z = Valencia
 
 2. **Cálculo de Distancia**: Se usa la distancia euclidiana:
+
    ```
    d = √[(x₁-x₂)² + (y₁-y₂)² + (z₁-z₂)²]
    ```
 
-3. **Búsqueda de Vecinos**: 
+3. **Búsqueda de Vecinos**:
    - Se calculan distancias a todas las canciones
    - Se seleccionan las K canciones más cercanas
 
@@ -161,16 +177,19 @@ La aplicación se iniciará en `http://localhost:8050`
 ## 🛠️ Tecnologías
 
 ### Core
+
 - **Python 3.8+**: Lenguaje principal
 - **NumPy**: Cálculos matemáticos y álgebra lineal
 - **Plotly**: Visualización 3D interactiva
 
 ### Framework Web
+
 - **Dash**: Framework web de Python
 - **Dash Bootstrap Components**: Componentes UI modernos
 - **Dash DAQ**: Componentes de instrumentación (LED Display)
 
 ### Estilos y Diseño
+
 - **Bootstrap Cyborg Theme**: Tema oscuro profesional
 - **Font Awesome 6**: Iconos vectoriales
 - **CSS3**: Gradientes, animaciones y efectos
@@ -228,6 +247,7 @@ app_web.ejecutar(debug=True, port=8080)  # Por defecto: 8050
 ### Personalizar Características
 
 Modifica las características musicales por otras:
+
 - Tempo (BPM)
 - Acousticness
 - Instrumentalness
